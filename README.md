@@ -21,5 +21,5 @@ Website ini tampil rapi di ponsel, tablet, dan laptop.
 - VS Code dan Live Server
 ## Tautan
 
-- Website: menyusul setelah *deploy* ke Vercel
+- Website: https://portofolio-fahmi-ramadhani.vercel.app/
 - Dibuat oleh: M. Fahmi ramadhani, SMKN 1 PASURUAN
