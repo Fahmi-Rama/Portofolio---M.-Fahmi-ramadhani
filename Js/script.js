@@ -1,6 +1,3 @@
-// Latihan Java script dasar- Minggu 6
-//kalkulator nilai rapor di console
-
 // 1 pesan pertama ke console
 console.log("Halo saya Fahmi!");
 console.log("Ini latihan javascript pertamaku");
