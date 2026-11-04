@@ -17,8 +17,8 @@ const celciuskeFahrenheit = (celcius) => {
 }
 console.log("Soal 2: mengubah suhu celcius ke fahrenheit");
 console.log(`celciuskeFahrenheit(0) = ${celciuskeFahrenheit(0)}`);
-console.log(`celciuskeFahrenheit(0) = ${celciuskeFahrenheit(100)}`);
-console.log(`celciuskeFahrenheit(0) = ${celciuskeFahrenheit(-40)}`);
+console.log(`celciuskeFahrenheit(100) = ${celciuskeFahrenheit(100)}`);
+console.log(`celciuskeFahrenheit(-40) = ${celciuskeFahrenheit(-40)}`);
 
 //Soal 3 Mengembalikan angka terbesar dari tiga angka
 function nilaiTerbesar(a, b, c) {
