@@ -1,3 +1,6 @@
+// JavaScript portofolio Fahmi ramadhani
+// Dipasang di ketiga halaman dengan defer
+// 1. Daftar keahlian (halaman Beranda)
 const skills = [
     { nama: "HTML", level: "Menengah"},
     { nama: "CSS", level: "Menengah"},
@@ -18,18 +21,26 @@ skills.forEach( (skill) => {
 });
 jumlahSkill.textContent = `Ada ${skills.length} keahlian yang saya kembangkan.`;
 }
-// tema gelap (semua halaman)
+// 2. Tema gelap (semua halaman)
 const tombolTema = document.querySelector("#tombol-tema");
-
-tombolTema.addEventListener("click", () => {
-  document.body.classList.toggle("gelap");
-
-  if (document.body.classList.contains("gelap")) {
+if (tombolTema) {
+  if (localStorage.getItem("tema") === "gelap") {
+    document.body.classList.add("gelap");
     tombolTema.textContent = "Mode Terang";
   } else {
     tombolTema.textContent = "Mode Gelap";
   }
-});
+  tombolTema.addEventListener("click", () => {
+    document.body.classList.toggle("gelap");
+    if (document.body.classList.contains("gelap")) {
+      localStorage.setItem("tema", "gelap");
+      tombolTema.textContent = "Mode Terang";
+    } else {
+      localStorage.setItem("tema", "terang");
+      tombolTema.textContent = "Mode Gelap";
+    }
+  });
+}
 //penghitung karakter pesan (halaman kontak)
 const kotakPesan = document.querySelector("#pesan");
 const hitungKarakter = document.querySelector("#hitung-karakter");
@@ -106,7 +117,15 @@ function tampilkanProyek(daftar) {
 
 function pasangFilter(idTombol, kategori) {
   const tombol = document.querySelector(idTombol);
+  if (!tombol) return;
+
   tombol.addEventListener("click", () => {
+    const tombolLama = document.querySelector(".tombol-filter.aktif");
+    if (tombolLama) {
+      tombolLama.classList.remove("aktif");
+    }
+    tombol.classList.add("aktif");
+
     if (kategori === "Semua") {
       tampilkanProyek(proyek);
     } else {
@@ -118,5 +137,7 @@ kategori));
 if (daftarProyek) {
   tampilkanProyek(proyek);
   pasangFilter("#filter-semua", "Semua");
+  pasangFilter("#filter-html", "Html");
+  pasangFilter("#filter-css", "Css");
   pasangFilter("#filter-javascript", "Javascript");
 }

@@ -217,7 +217,7 @@ button {
   border: none;
   border-radius: 6px;
   background-color: var(--warna-aksen);
-  color: var(--warna-kartu);
+  color: #FFFFFF;
   font-family: inherit;
   font-size: 1rem;
   font-weight: 600;
@@ -283,6 +283,34 @@ footer a {
   background-color: transparent;
   font-size: 0.9rem;
 }
+.filter,
+.filter-proyek {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.tombol-filter {
+  padding: 0.5rem;
+  border: 2px solid var(--warna-garis);
+  background-color: var(--warna-kartu);
+  color: var(--warna-judul);
+}
+.tombol-filter.aktif {
+  background-color: var(--warna-aksen);
+  border-color: var(--warna-aksen);
+  color: #FFFFFF;
+}
+.label {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  margin-bottom: 0.5rem;
+  border-radius: 999px;
+  background-color: var(--warna-latar);
+  color: var(--warna-judul);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
 /* 11. tema gelap:isi variabel diganti saat body memiliki class gelap */
   
 body.gelap {
@@ -294,24 +322,8 @@ body.gelap {
   --warna-kartu: #1C2836;
   --warna-garis: #34465A;
 }
-/* keterangan karakter kontak */
-.keterangan {
-  font-size: 0.875rem;
-}
-/* Gaya tombol filter dan label kategori di bagian 10 */
-.filter {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-.label {
-  display: inline-block;
-  padding: 0.1rem 0.6rem;
-  margin-bottom: 0.5rem;
-  border-radius: 999px;
-  background-color: var(--warna-latar);
-  color: var(--warna-judul);
-  font-size: 0.85rem;
-  font-weight: 600;
+body.gelap .tombol-filter.aktif {
+  background-color: #ff8a8a;
+  border-color: #FF8A8A;
+  color: #0B1526;
 }
