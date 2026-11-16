@@ -1,0 +1,22 @@
+[
+  {
+    "nama": "HTML",
+    "level": "Menengah"
+  },
+  {
+    "nama": "CSS",
+    "level": "Menengah"
+  },
+  {
+    "nama": "Git dan Github",
+    "level": "Dasar"
+  },
+  {
+    "nama": "Desain podter dengan canva",
+    "level": "Mahir"
+  },
+  {
+    "nama": "javascript",
+    "level": "Dasar"
+  }
+]
