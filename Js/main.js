@@ -57,52 +57,26 @@ if (kotakPesan) {
   });
 }
 // 4. Daftar proyek dan filter (halaman Proyek)
-const proyek = [
-  {
-    judul: "Halaman Profil Pertama",
-    kategori: "Html",
-    gambar: "img/proyek-profil.png",
-    alt: "Tangkapan layar halaman profil Fahmi ramadhani",
-    deskripsi: "Halaman web pertama saya, dibuat dengan html dasar.",
-  },
-  {
-    judul: "Form Kontak",
-    kategori: "Html",
-    gambar: "img/proyek-kontak.png",
-    alt: "Tangkapan layar form kontak berisi lima isian",
-    deskripsi: "Form dengan label dan validasi bawaan browser.",
-  },
-  {
-    judul: "Tabel jadwal belajar",
-    kategori: "Html",
-    gambar: "img/proyek-jadwal.png",
-    alt: "Tangkapan layar tabel jadwal mandiri",
-    deskripsi: "Jadwal belajar mingguan dengan thead dan tbody.",
-  },
-  {
-    judul: "Portofolio responsif",
-    kategori: "Css",
-    gambar: "img/proyek responsif.png",
-    alt: "Tangkapan layar portofolio di ponsel dan laptop",
-    deskripsi: "Rapi di ponsel, tablet, dan laptop dengan flexbox",
-  },
-  {
-    judul: "Kalkulator nilai rapor",
-    kategori: "Javascript",
-    gambar: "img/proyek-kalkulator.png",
-    alt: "Tangkapan layar hasil kalkulator nilai di console",
-    deskripsi: "Rata-rata dan predikat nilai dengan fungsi Javascript",
-  },
-  {
-    judul: "Lima soal logika",
-    kategori: "Javascript",
-    gambar: "img/proyek-logika.png",
-    alt: "Tangkapan layar hasil lima soal logika",
-    deskripsi: "Lima fungsi soal logika yang masing-masing diuji 3 masukan.",
-  },
-];
+
+let proyek = [];
+
 const daftarProyek = document.querySelector("#daftar-proyek");
 const jumlahProyek = document.querySelector("#jumlah-proyek");
+
+async function muatProyek() {
+  jumlahProyek.textContent = "Memuat proyek...";
+  try {
+    const response = await fetch("data/proyek.json");
+    if (!response.ok) {
+      throw new Error(`Status ${response.status}`);
+    }
+    proyek = await response.json();
+    muatProyek(proyek);
+  } catch (error) {
+    jumlahProyek.textContent = "Data proyek gagal dimuat.";
+    console.error(error);
+  }
+}
 
 function buatKartu(item) {
   return `
@@ -140,7 +114,7 @@ kategori));
   });
 }
 if (daftarProyek) {
-  tampilkanProyek(proyek);
+  muatProyek(proyek);
   pasangFilter("#filter-semua", "Semua");
   pasangFilter("#filter-html", "Html");
   pasangFilter("#filter-css", "Css");
