@@ -71,7 +71,7 @@ async function muatProyek() {
       throw new Error(`Status ${response.status}`);
     }
     proyek = await response.json();
-    muatProyek(proyek);
+    tampilkanProyek(proyek);
   } catch (error) {
     jumlahProyek.textContent = "Data proyek gagal dimuat.";
     console.error(error);
