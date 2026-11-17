@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Kantin SMK Mitra</title>
+  <!-- Ikon tab -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍽️</text></svg>">
+  <link rel="stylesheet" href="css/menu.css">
+  <script src="js/kantin.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Menu Kantin SMK Mitra</h1>
+      <button id="btn-mode-gelap" type="button">Mode Gelap</button>
+    </header>
+
+    <div class="filter-group">
+      <button type="button" data-kategori="Semua">Semua</button>
+      <button type="button" data-kategori="Makanan">Makanan</button>
+      <button type="button" data-kategori="Minuman">Minuman</button>
+    </div>
+
+    <!-- Tempat teks "Memuat menu..." dan "6 menu tersedia" -->
+    <p id="info-jumlah">Memuat menu...</p>
+
+    <!-- Daftar menu berupa elemen <ul> yang akan diisi <li> -->
+    <ul id="daftar-menu"></ul>
+  </main>
+</body>
+</html>

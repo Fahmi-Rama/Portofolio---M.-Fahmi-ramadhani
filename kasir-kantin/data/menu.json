@@ -1,0 +1,8 @@
+[
+  { "nama": "Nasi goreng", "harga": 12000, "kategori": "Makanan" },
+  { "nama": "Mie ayam", "harga": 10000, "kategori": "Makanan" },
+  { "nama": "Soto ayam", "harga": 11000, "kategori": "Makanan" },
+  { "nama": "Es teh", "harga": 4000, "kategori": "Minuman" },
+  { "nama": "Es jeruk", "harga": 5000, "kategori": "Minuman" },
+  { "nama": "Air mineral", "harga": 3000, "kategori": "Minuman" }
+]
