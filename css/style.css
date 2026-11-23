@@ -166,7 +166,9 @@ main {
   flex: 1 1 280px;
   margin-bottom: 0;
 }
-
+#daftar-proyek {
+  min-height: 30rem;
+}
 article img {
   border-radius: 8px;
   border: 1px solid var(--warna-garis);
