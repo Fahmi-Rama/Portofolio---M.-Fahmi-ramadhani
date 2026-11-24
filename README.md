@@ -8,6 +8,8 @@ dan laptop, serta interaktif dengan JavaScript.
 ## Tampilan
 
 ![Tampilan beranda Portofolio v2](img/tampilan-portofolio.png)
+## tampilan lighthouse
+![Tampilan lighthouse](img/nilai-lighthouse.png)
 
 ## Fitur
 
